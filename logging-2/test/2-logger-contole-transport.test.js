@@ -5,8 +5,5 @@ test("buat logger baru dengan console transport", () => {
     transports: [new winston.transports.Console()],
   });
 
-  logger.log({
-    level: "info",
-    message: "Hello Logger",
-  });
+  logger.info("Hello Logger");
 });
