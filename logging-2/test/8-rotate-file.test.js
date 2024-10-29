@@ -7,9 +7,9 @@ test("logger dengan file transport", () => {
       new winston.transports.Console(),
       new DailyRotateFile({
         filename: "app-%DATE%.log",
-        zippedArchive: true,
+        zippedArchive: true, // akan dibuatkan zip, ketika hari berganti atau file log sudah max size
         maxSize: "1m",
-        maxFiles: "10d",
+        maxFiles: "10d", // setelah 10 hari akan dihapus
       }),
     ],
   });
